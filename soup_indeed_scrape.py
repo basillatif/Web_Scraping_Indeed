@@ -13,10 +13,6 @@ page= response.text
 soup = BeautifulSoup(page, 'lxml')
 
 all_matches = soup.find_all('a', attrs={'rel':['nofollow']})
-# for i in all_matches:
-#     print (i['href'])
-#     print (type(i['href']))
-#     print ("https://www.indeed.com/m/"+i['href'])
 
 title = []
 company = []
@@ -96,5 +92,7 @@ print("Pig: ", sum_pig)
 print("Spark: ", sum_spark)
 print("AWS: ", sum_aws)
 print("Tableau", sum_tab)
+
+
 
 #Print frequencies San Francisco, Los Angeles, New York, Boston, Chicago, Austin and DC.
